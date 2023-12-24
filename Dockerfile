@@ -11,15 +11,12 @@ COPY . /app
 RUN mvn clean package -DskipTests
 
 # Stage for running the application
-FROM adoptopenjdk:17-jre-hotspot
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-# Copy the compiled Spring Boot JAR file from the build stage
-COPY --from=build /app/target/your-app.jar /app/app.jar
+COPY target/your-app.jar /app/app.jar
 
-# Expose the port your app runs on (if needed)
 EXPOSE 8080
 
-# Specify the command to run your application
 CMD ["java", "-jar", "app.jar"]
