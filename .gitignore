@@ -15,7 +15,6 @@
 .settings/
 
 # Maven target directory
-/target/
 
 # Logs
 logs/
