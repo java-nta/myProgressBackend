@@ -1,0 +1,25 @@
+# Compiled class file
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA files
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Maven target directory
+/target/
+
+# Logs
+logs/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
