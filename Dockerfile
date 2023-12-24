@@ -8,7 +8,7 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Stage 2: Runtime stage
-FROM adoptopenjdk:17-jre-hotspot
+FROM adoptium/openjdk:17-jre AS runtime
 
 # Create a directory to hold the application files
 RUN mkdir /app
