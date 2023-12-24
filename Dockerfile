@@ -3,5 +3,6 @@ FROM adoptopenjdk:11-jre-hotspot
 
 # Set the working directory inside the container
 WORKDIR /app
+COPY *.jar app.jar
 
-CMD ["java", "-jar", "JavaApp-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app.jar"]
